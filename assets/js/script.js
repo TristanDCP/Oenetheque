@@ -313,7 +313,7 @@ function functionBtnDown(type) {
   idResult.innerHTML = "<b>" + type[3] * type[6] + "</b>€";
   // Si le nombre de bouteille est égal à zéro, la ligne disparaît.
   if (type[6] < 1) {
-    idTable.innerHTML = "";
+    idTable.parentNode.removeChild(idTable);
   }
   //total -> bouton paiement
   totalPrice = Number(totalPrice) - Number(type[3]);
