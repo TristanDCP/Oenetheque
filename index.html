@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="assets\img\iconeraisin.png" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Œnothèque</title>
+</head>
+
+<body>
+    <!-- MODAL AVERTISSEMENT -->
+    <div class="modal" tabindex="-1" role="dialog" id="warning">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content" id="modalwarning">
+                <div class="modal-body">
+                    <p>Avez-vous 18 ans ou plus?</p>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn text-pinkwhite bg-darkwine"
+                        href="https://oranginasuntoryfrance.com/nos-marques/champomy/">Non</a>
+                    <button type="button" class="btn btn-dark text-pinkwhite bg-pinkdark" id="warning-yes"
+                        data-dismiss="modal">Oui</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HEADER -->
+
+    <header>
+        <div id="img-accueil" class="container-fluid">
+            <div class="row justify-content-lg-start justify-content-center text-center">
+                <div class="col-12 justify-content-center text-center">
+                    <h1 class="text-pinkwhite font-parisienne" id="titreHeader">Œnothèque</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-pinkish sticky-top shadow" id="toppage">
+        <a class="navbar-brand" href="#areaHomepage" id="homepage"><img src="assets\img\iconeraisin.png"
+                alt="iconRaisin" title="Vinothèque" style="width: 2em; height: 2em;"> Œnothèque</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#areachampagne" id="champagne">Champagnes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#areawine" id="wine">Vins</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#areaspirit" id="spirit">Spiritueux</a>
+                </li>
+            </ul>
+
+            <a href="#" data-toggle="modal" data-target="#cartmodal" class="ml-3 text-darkwine" id="icon-cart">
+                <img src="assets\img\cartempty.png" alt="Panier Vide" style="width: 2.5em; height: 2.5em;">
+            </a>
+        </div>
+    </nav>
+    <!-- ITEMS -->
+    <section class="img-fond py-3">
+        <div class="container">
+            <div class="row text-darkwine justify-content-center text-center p-2" id="mainArea">
+                <a class="h1 font-parisienne">Notre Maison</a>
+                <p>Œnothèque est une boutique spécialisée en vins de collections pour le plaisir des amateurs et des
+                    collectionneurs.
+                    Notre sommelier a sélectionné les plus grands vins de notre territoire pour votre plus grand
+                    plaisir. Des bulles de la Champagne de nos plus grands terroirs aux parcelles de Bourgogne et de la
+                    vallée du Rhône en passant par les vins minéraux de la Loire et les vins tanniques du vignoble
+                    Bordelais, ainsi que ceux du Languedoc. La plupart de nos vins ont à excellent potentiel de garde
+                    et pourront rester dans votre cave afin de profiter pleinement des arômes.
+                    Nos livraisons sont préparées avec soin et nous vous garantissons un emballage anti-casse.</p>
+                <hr class="separator">
+                <a class="h2 col-12 font-parisienne" onclick="showCardChampagne()">Champagne</a>
+                <p>
+                    Œnothèque vous propose un large choix de Champagne issu des meilleures maisons du vignoble
+                    champenois. La plupart de nos champagnes sont millésimés et viennent d'assemblage dans la parfaite
+                    tradition de la méthode champenoise, les bulles seront l'allié parfait pour vos apéritifs ou pour
+                    terminer en beauté autour d'un dessert. Nos champagnes sont servis dans des coffrets luxe.
+                </p>
+                <hr class="separator">
+                <a class="h2 col-12 font-parisienne" onclick="showCardWine()">Vins</a>
+                <p>Notre vinothèque met en avant nos cépages français dans une sélection issue des meilleurs domaines de
+                    France. Les blancs mettent en avant la minéralité du riesling, du sauvignon, la puissance du
+                    chardonnay et de la Marsanne. Les rouges offrent la puissance du fruit et l'équilibre en bouche.
+                    Nous vous proposons également la cuvée "Raven" et "Autrement Dit" du domaine Sine Qua Non de
+                    Californie mettant en avant les cépages rhodaniens. Les vins de dessert sont également à l'honneur
+                    avec l'inimitable Château Yquem et le terroir du Jurançon.
+                </p>
+                <hr class="separator">
+                <a class="h2 col-12 font-parisienne" onclick="showCardSpirit()">Spiritueux</a>
+                <p>Notre gamme de spiritueux est issue de bouteilles rares sélectionnées qui raviront les grands
+                    connaisseurs. Nos whiskys des Highlands d'Écosse au Japon mais également nos cognacs français mis à
+                    l'honneur avec l'ambassadeur Louis XIII.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BARRE COLOREE FOOTER -->
+    <footer>
+        <div class="container-fluid text-center text-md-left bg-pinkish text-darkwine pt-3">
+            <div class="row text-center justify-content-center">
+                <div class="col-sm-5 col-lg-3 col-xl-4 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">A propos</h6>
+                    <hr class="bg-pinkwhite mb-4 mt-0 d-inline-block mx-auto" style="width: 100px;">
+                    <p>Nos Boutiques</p>
+                    <p>Service Client</p>
+                    <p>Nous Contacter</p>
+                    <i class="fab fa-facebook fa-2x m-1"></i>
+                    <i class="far fa-comment-dots fa-2x m-1"></i>
+                    <i class="fab fa-instagram fa-2x m-1"></i>
+                    <h6 class="text-uppercase font-weight-bold pt-4">Livraison</h6>
+                    <hr class="bg-pinkwhite mb-4 mt-0 d-inline-block mx-auto" style="width: 80px;">
+                    <p>Service livraison</p>
+                    <p>Suivre votre colis</p>
+                </div>
+                <div class="col-sm-5 col-lg-3 col-xl-4 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">Paiement</h6>
+                    <hr class="bg-pinkwhite mb-4 mt-0 d-inline-block mx-auto" style="width: 100px;">
+                    <p>Mode de Paiement</p>
+                    <i class="fab fa-cc-visa fa-2x"></i>
+                    <i class="fab fa-cc-amex fa-2x"></i>
+                    <i class="fab fa-cc-paypal fa-2x"></i>
+                    <i class="fab fa-cc-apple-pay fa-2x"></i>
+                    <p>Chèques cadeaux</p>
+                    <p>Cadeaux d’entreprise</p>
+                    <hr class="bg-pinkwhite d-inline-block mx-auto mt-3" style="width: 100px;">
+                    <p>Mentions Légales</p>
+                    <p>Conditions générales de vente</p>
+                    <p>Cookies</p>
+
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-4 mx-auto mb-0 mb-4">
+                    <h6 class="text-uppercase font-weight-bold">Notre Engagement</h6>
+                    <hr class="bg-pinkwhite mb-4 mt-0 d-inline-block mx-auto" style="width: 100px;">
+                    <p>Livraison offerte<i class="fas fa-gift ml-2"></i></p>
+                    <p>Paiement securisé<i class="fas fa-lock ml-2"></i></p>
+                    <p>Emballage qualité<i class="fas fa-shopping-basket ml-2"></i></p>
+                    <h6 class="text-uppercase font-weight-bold">Newsletter</h6>
+                    <hr class="bg-pinkwhite mb-4 mt-0 d-inline-block mx-auto" style="width: 100px;">
+                    <div class="col text-darkwine">
+                        <div class="text-center">Recevez en avant-première nos découvertes et nos ventes privilèges
+                            </p>
+                            <form>
+                                <input class="form-control text-center" type="text" placeholder="@ Votre Email">
+                                <button id="news" type="button" class="btn btn-dark text-pinkwhite">Je
+                                    m'inscris</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Copyright-->
+        <div class="text-darkwine text-center pt-3">
+            <p> © 2020. Les images appartiennent aux marques. Team SoundBoard, Merlin & Co <i
+                    class="fas fa-glass-cheers"></i></p>
+            <h3 class="text-center pt-3">L'abus d'alcool est dangereux pour la santé, à consommer avec modération</h3>
+        </div>
+    </footer>
+
+    <!-- bouton go to top -->
+    <button onclick="topFunction()" id="btnUpPage" title="Go to top">▲</button>
+
+    <!-- modal panier -->
+    <div class="modal fade" id="cartmodal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="modal-title h5">Panier</p>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body row">
+                    <table
+                        class="col-12 table table-striped table-bordered align-middle justify-content-center text-center ">
+                        <thead>
+                            <tr class="table-modif-title">
+                                <th scope="col">Produit</th>
+                                <th scope="col">Nom</th>
+                                <th scope="col">Prix/u</th>
+                                <th scope="col">+/-</th>
+                                <th scope="col">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartlist">
+
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark text-pinkwhite bg-darkwine"
+                        data-dismiss="modal">Fermer</button>
+                    <button type="button" class="btn btn-dark text-pinkwhite bg-pinkdark" id="buytotal">Paiement
+                        :</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOTSTRAP + SCRIPT JS -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script>
+        $('.navbar-nav>li>a').on('click', function () {
+            $('.navbar-collapse').collapse('hide');
+        });
+    </script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

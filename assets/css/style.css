@@ -1,0 +1,175 @@
+/* majeur ? */
+#warning{
+ background-color: rgba(0, 0, 0, 0.85);
+ padding-top: 20rem;
+}
+#modalwarning{
+    align-items: center;
+    vertical-align: middle;
+}
+
+#img-accueil{
+    width: 100%;
+    height: 40vh;
+    background-image: url(../img/homepage2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+.font-parisienne{
+    font-family: 'Parisienne', cursive;
+}
+#titreHeader{
+    font-size: 8rem;
+    padding-top: 6rem;
+    padding-right: 5rem;
+    text-shadow:  0 0 5px rgb(97, 97, 97), 0 0 10px rgb(97, 97, 97), 0 0 15px rgb(97, 97, 97);
+}
+.img-fond{
+    background-image: url(../img/vigne.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.leftbutton{
+    margin-right: 2rem;
+}
+.text-darkwine{
+    color: #3A2C32;
+}
+.text-pinklight{
+    color: #EE8E96;
+}
+.text-pinkwhite{
+    color: #FFEBEE;
+}
+.bg-darkwine{
+    background-color: #3A2C32;
+}
+.bg-pinkdark{
+    background-color: #551E1F; 
+}
+.bg-pinkmiddle{
+    background-color: #CE4E56;
+}
+.bg-pinklight{
+    background-color: #EE8E96;
+}
+.bg-pinkwhite{
+    background-color: #FFEBEE;
+}
+.btn-dark:visited{
+    background-color: #551E1F; 
+}
+.title-card-size, .table-modif, .table-modif-title{
+    font-size: 1em;
+}
+.separator{
+    width: 100%;
+    border: 0;
+    height: 70px;
+    opacity: 25%;
+    background-image: url(../img/separateur.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+}
+
+/* Footer*/
+h3 {
+    font-family: 'Parisienne', cursive;
+}
+ 
+#news {
+    background-color: #3A2C32 ;
+    font-family: 'Parisienne', cursive;
+}
+
+.bg-pinkish {
+    background-color: #faf2f2;
+}
+/* bouton up page */
+#btnUpPage {
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    right: 30px;
+    z-index: -1;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    background-color: rgb(75, 24, 25);
+    opacity: 0;
+    color: #FFEBEE;
+    padding: 5px 15px 10px 15px;
+    border-radius: 3rem;
+    cursor: pointer;
+}
+
+#btnUpPage:hover {
+    background-color: rgb(61, 24, 25);
+    padding: 0px 15px 15px 15px;
+}
+
+.btnplus{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+.btnmoins{
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+@media screen and (max-width:800px) {
+
+    #titreHeader{
+        font-size: 6rem;
+        padding-top: 6rem;
+        padding-right: 0;
+    }
+    #img-accueil{
+        height: 40vh;
+    }
+    .title-card-size, .table-modif, .table-modif-title{
+        font-size: 0.85em;
+    }
+    .img-fond{
+        background-size: cover;
+    }
+    .separator{
+        height: 65px;
+
+        background-size: 60%;
+    }
+}
+@media screen and (max-width:450px) {
+
+    #titreHeader{
+        font-size: 3rem;
+        padding-top: 6rem;
+    }
+    #img-accueil{
+        width: 100%;
+        height: 40vh;
+    }
+    .title-card-size, .table-modif, .table-modif-title{
+        font-size: 0.75em;
+    }
+    .img-fond{
+        background-size: 150%;
+    }
+}
+@media screen and (max-height:500px) {
+
+    #titreHeader{
+        font-size: 6rem;
+        padding-top: 1rem;
+        padding-right: 0;
+    }
+    #warning{
+        padding-top: 5rem;
+       }
+}
